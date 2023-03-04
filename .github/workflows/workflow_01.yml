@@ -27,6 +27,6 @@ jobs:
         run: |
           curl -X POST https://api.github.com/repos/MrSmid/ci_proj/dispatches \
           -H 'Accept: application/vnd.github.everest-preview+json' \
-          -u ${{ secrets.ACTIONS_KEY }} \
+          -u ${{ secrets.ACTION_SECRET }} \
           --data '{"event_type": "Trigger Workflow", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
       - uses: actions/checkout@v3
